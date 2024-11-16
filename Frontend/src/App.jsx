@@ -2,16 +2,14 @@
 import './App.css'
 
 function App() {
-
-
   return (
-    <><div>
-
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+      <h1 className="text-4xl font-bold text-blue-500">
+        Hello, Tailwind CSS with React!
+      </h1>
     </div>
-     <h1>Student Management System</h1>
-     <p>Welcome to SMS</p>    </>
-   
-  )
+  );
 }
 
-export default App
+export default App;
+
