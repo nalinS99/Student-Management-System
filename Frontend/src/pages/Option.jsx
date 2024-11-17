@@ -1,12 +1,45 @@
 import React from 'react'
 import OptionCard from '../Components/OptionCard'
+import {Link} from "react-router-dom"
 
 
 function Option() {
   return (
-    <div>
-        <OptionCard name= "principle"/>
+    <>
+<div>
+  <h1 className='text-5xl mt-20 ml-32 mb-20 font-extrabold tracking-widest text-primary'>
+    Are You a ?
+  </h1>
+</div>
+
+
+
+    <div className="flex justify-around ml-60 mr-60">
+      
+      <Link to="/PDashBoard">
+      
+      <div>
+        <OptionCard name= "PRINCIPLE"/>
+
+    </div></Link>
+
+    <Link to="/">
+      <div>
+        <OptionCard name= "TEACHER"/>
+
+    </div></Link>
+
+    <Link to="/">
+      <div>
+        <OptionCard name= "STUDENT"/>
+
+    </div></Link>
+      
     </div>
+    
+    </>
+    
+    
   )
 }
 
