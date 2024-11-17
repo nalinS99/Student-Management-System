@@ -16,7 +16,7 @@ function Option() {
 
     <div className="flex justify-around ml-60 mr-60">
       
-      <Link to="/PDashBoard">
+      <Link to="/PLogin">
       
       <div>
         <OptionCard name= "PRINCIPLE"/>
