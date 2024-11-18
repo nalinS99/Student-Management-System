@@ -7,6 +7,8 @@ import Option from './pages/Option';
 import PDashBoard from './pages/Principle/PDashBoard';
 import PLogin from './pages/Principle/PLogin';
 import AddTeacher from './pages/Principle/AddTeacher';
+import ViewAttendance from './pages/Principle/ViewAttendance';
+import ViewResult from './pages/Principle/ViewResult';
 
 
 function App() {
@@ -20,7 +22,8 @@ function App() {
       <Route path='/PDashBoard' element= {<PDashBoard/>}/>
       <Route path='/PLogin' element= {<PLogin/>}/>
       <Route path='/addteachers' element= {<AddTeacher/>}/>
-      
+      <Route path='/viewattendance' element={<ViewAttendance/>} />
+      <Route path='/ViewResult' element={<ViewResult/>}/>
     </Routes>
 </Router>
     
