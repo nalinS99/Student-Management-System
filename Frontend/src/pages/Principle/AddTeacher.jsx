@@ -9,7 +9,7 @@ function AddTeacher() {
       </div>
 
       <div className="flex h-screen items-center justify-center basis-4/5  ">
-      <form className="bg-transparent flex flex-col items-center gap-4">
+      <form className="bg-transparent flex flex-col items-center gap-10">
         <input
           type="text"
           placeholder="Grade ID"
