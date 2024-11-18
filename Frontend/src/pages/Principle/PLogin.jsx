@@ -1,5 +1,5 @@
-
 import React from "react";
+import {Link} from "react-router-dom";
 
 const Login = () => {
   return (
@@ -10,7 +10,9 @@ const Login = () => {
           <span className="text-indigo-900">M </span>
           <span className="text-yellow-500">S</span>
         </h1>
-        <h2 className="text-center text-4xl font-bold mb-8 text-gray-900">Principle</h2>
+        <h2 className="text-center text-4xl font-bold mb-8 text-gray-900">
+          Principle
+        </h2>
         <form>
           <div className="mb-6">
             <input
@@ -26,12 +28,14 @@ const Login = () => {
               className="w-full px-4 py-2 bg-indigo-200 text-gray-900 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
+          <Link to="/PDashBoard">
           <button
             type="submit"
             className="w-full bg-indigo-900 text-white py-2 rounded font-medium hover:bg-indigo-800"
           >
             Log In
-          </button>
+          </button></Link>
+          
         </form>
       </div>
     </div>

@@ -1,10 +1,10 @@
 import React from 'react'
-import PNavBar from '../../Components/PNavBar'
+import PLayout from './PLayout'
 
 function PDashBoard() {
   return (
     <>
-    <PNavBar/>
+    <PLayout/>
     </>
   )
 }
