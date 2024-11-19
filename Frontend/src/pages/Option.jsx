@@ -18,7 +18,7 @@ function Option() {
           </div>
         </Link>
 
-        <Link to="/">
+        <Link to="/TLogin">
           <div>
             <OptionCard name="TEACHER" />
           </div>

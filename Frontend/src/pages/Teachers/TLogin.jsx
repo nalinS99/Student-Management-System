@@ -1,28 +1,52 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-const PLogin = () => {
-  const [userID, setUserID] = useState("");
-  const [password, setPassword] = useState("");
+const TLogin = () => {
+  const [GradeID, setGradeID] = useState("");
+  const [tPassword, settPassword] = useState("");
   const navigate = useNavigate();
 
-  async function passData(e) {
+
+  async  function passedData(e){
+    const data = {GradeID ,tPassword} ;
     e.preventDefault(); 
-    const data = { userID, password };
-    try {
-      const response = await axios.post(`http://localhost:4000/PLogin`, data);
-      console.log("Response from server:", response.data);
-      if (response.data === "login Sucess") {
-       navigate("/PDashBoard") ;
+    try{
+      const response = await axios.post(`http://localhost:4000/TeLogin` ,data);
+    
+      if(response.data.GradeID  === "GD1" ){
       
-      } else {
-        alert("Invalid credentials");
+          console.log(response.data.GradeID);
+      }
+      else if(response.data.GradeID  === "GD2"){
+        console.log(response.data.GradeID);
+      }
+
+      else if(response.data.GradeID  === "GD3"){
+        console.log(response.data.GradeID);
+      }
+
+      else if(response.data.GradeID  === "GD4"){
+        console.log(response.data.GradeID);
+      }
+
+      else if(response.data.GradeID  === "GD5"){
+        console.log(response.data.GradeID);
+      }
+      else if(response.data.message ===  "Invalid password"){
+        alert("Invalid password");
+      }
+      else{
+        alert("Teacher not found");
       }
     } catch (error) {
       console.error("Error during login:", error);
     }
+
   }
+  
+
+  
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-white">
@@ -33,15 +57,15 @@ const PLogin = () => {
           <span className="text-yellow-500">S</span>
         </h1>
         <h2 className="text-center text-4xl font-bold mb-8 text-gray-900">
-          Principle
+          Teacher
         </h2>
-        <form onSubmit={passData}>
+        <form onSubmit={passedData}>
           <div className="mb-6">
             <input
               type="text"
-              placeholder="School ID"
+              placeholder="Grade ID"
               className="w-full px-4 py-2 bg-indigo-200 text-gray-900 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              onChange={(e) => setUserID(e.target.value)}
+              onChange={(e) => setGradeID(e.target.value)}
               required
             />
           </div>
@@ -50,7 +74,7 @@ const PLogin = () => {
               type="password"
               placeholder="Password"
               className="w-full px-4 py-2 bg-indigo-200 text-gray-900 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => settPassword(e.target.value)}
               required
             />
           </div>
@@ -66,4 +90,4 @@ const PLogin = () => {
   );
 };
 
-export default PLogin;
+export default TLogin;

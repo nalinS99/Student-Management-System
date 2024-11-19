@@ -9,6 +9,7 @@ import PLogin from './pages/Principle/PLogin';
 import AddTeacher from './pages/Principle/AddTeacher';
 import ViewAttendance from './pages/Principle/ViewAttendance';
 import ViewResult from './pages/Principle/ViewResult';
+import TLogin from './pages/Teachers/TLogin';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Route path='/addteachers' element= {<AddTeacher/>}/>
       <Route path='/viewattendance' element={<ViewAttendance/>} />
       <Route path='/ViewResult' element={<ViewResult/>}/>
+      <Route path='/TLogin' element={<TLogin/>} />
     </Routes>
 </Router>
     

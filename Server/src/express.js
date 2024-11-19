@@ -5,12 +5,14 @@ const PORT = process.env.PORT;
 const express = require("express");
 const app = express();
 const principleRoute = require("../routes/principleRoute");
+const teacherRoute = require("../routes/teacherRoute");
 
 app.use(express.json());
 app.use(cors());
 
 
 app.use("/",principleRoute);
+app.use("/",teacherRoute);
 
 
 dbCon().then( ()=>{
