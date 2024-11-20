@@ -14,7 +14,7 @@ const PLogin = () => {
       const response = await axios.post(`http://localhost:4000/PLogin`, data);
       console.log("Response from server:", response.data);
       if (response.data === "login Sucess") {
-       navigate("/PDashBoard") ;
+       navigate("/addteachers") ;
       
       } else {
         alert("Invalid credentials");

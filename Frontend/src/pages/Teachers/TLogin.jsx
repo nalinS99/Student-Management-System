@@ -15,8 +15,8 @@ const TLogin = () => {
       const response = await axios.post(`http://localhost:4000/TeLogin` ,data);
     
       if(response.data.GradeID  === "GD1" ){
-      
-          console.log(response.data.GradeID);
+      navigate("/GOne");
+          
       }
       else if(response.data.GradeID  === "GD2"){
         console.log(response.data.GradeID);
