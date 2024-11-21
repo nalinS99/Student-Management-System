@@ -6,7 +6,10 @@ function GoneAddSub() {
   return (
     <div className="flex">
         <div className="basis-1/5">
-        <GLayout link1="/GOne"/>
+        <GLayout 
+        grade="Grade 01"
+        link1="/GOne"
+        link5="/GoneStd"/>
         </div>
         <AddSub/>
     </div>

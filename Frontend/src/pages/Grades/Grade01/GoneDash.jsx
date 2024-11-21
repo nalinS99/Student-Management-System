@@ -8,9 +8,12 @@ function GoneDash() {
     <div className="flex">
 
     <div className=" basis-1/5 ">
-    <GLayout link2="/GoneAddSub" />
+    <GLayout 
+    grade="Grade 01"
+    link2="/GoneAddSub"
+    link5="/GoneStd" />
     </div>
-    <AddStudent/>
+    <AddStudent GradeID ="GD1"/>
     </div>
      
     </>
