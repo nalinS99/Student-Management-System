@@ -10,8 +10,8 @@ import ViewAttendance from './pages/Principle/ViewAttendance';
 import ViewResult from './pages/Principle/ViewResult';
 import TLogin from './pages/Teachers/TLogin';
 import GoneDash from './pages/Grades/Grade01/GoneDash';
-import GoneAddSub from './pages/Grades/Grade01/GoneAddSub';
 import GoneStudent from './pages/Grades/Grade01/GoneStudent';
+import GoneAddResult from './pages/Grades/Grade01/GoneAddResult';
 
 
 
@@ -31,7 +31,7 @@ function App() {
       <Route path='/TLogin' element={<TLogin/>} />
 
       <Route path='/GOne' element={<GoneDash/>} />
-      <Route path="/GoneAddSub" element= {<GoneAddSub/>} />
+      <Route path='/GOneAddRes' element ={<GoneAddResult/>} />
       <Route path="/GoneStd" element ={<GoneStudent/>} />
       
     </Routes>

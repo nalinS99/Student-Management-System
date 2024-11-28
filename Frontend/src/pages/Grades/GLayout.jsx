@@ -21,14 +21,7 @@ function GLayout(props) {
                 Add Student
               </Link>
             </li>
-            <li>
-              <Link
-                to={props.link2}
-                className="block text-lg hover:bg-indigo-800 p-10 rounded  text-center border-b-2 border-yellow-400"
-              >
-                Add Subjects
-              </Link>
-            </li>
+            
             <li>
               <Link
                 to={props.link3}

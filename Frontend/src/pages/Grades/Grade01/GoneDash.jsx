@@ -10,8 +10,8 @@ function GoneDash() {
     <div className=" basis-1/5 ">
     <GLayout 
     grade="Grade 01"
-    link2="/GoneAddSub"
-    link5="/GoneStd" />
+    link5="/GoneStd" 
+    link3 ="/GOneAddRes"/>
     </div>
     <AddStudent GradeID ="GD1"/>
     </div>

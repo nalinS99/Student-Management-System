@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
 const studentSchema =new mongoose.Schema({
     stdID:{
-        type:String,
-        required:true,
-        unique:true
+        type: String,
+        required: true,
+        unique: true, // Ensures no two students have the same ID
+        trim: true,
     },
     sName:{
         type:String,
@@ -16,7 +17,7 @@ const studentSchema =new mongoose.Schema({
     },
     GradeID :{
         type:String,
-        require:true,
+        required:true,
     }
 });
 
