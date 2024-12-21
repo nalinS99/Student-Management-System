@@ -24,7 +24,7 @@ function Option() {
           </div>
         </Link>
 
-        <Link to="/">
+        <Link to="/SLogin">
           <div>
             <OptionCard name="STUDENT" />
           </div>

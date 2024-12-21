@@ -10,7 +10,7 @@ function GoneAddResult() {
     grade="Grade 01"/>
     </div>
     <div className="basis-4/5">
-    <AddResult />
+    <AddResult GradeID = "GD1" />
     </div>
 </div>
   )

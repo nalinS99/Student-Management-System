@@ -22,6 +22,8 @@ const teacherSchema = new mongoose.Schema({
         require:true,
         
     }
+},{
+    timestamps:true,
 })
 
 const teacher = new mongoose.model("Teacher",teacherSchema);

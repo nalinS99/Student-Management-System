@@ -12,7 +12,7 @@ import TLogin from './pages/Teachers/TLogin';
 import GoneDash from './pages/Grades/Grade01/GoneDash';
 import GoneStudent from './pages/Grades/Grade01/GoneStudent';
 import GoneAddResult from './pages/Grades/Grade01/GoneAddResult';
-
+import SLogin from './pages/Student/SLogin';
 
 
 function App() {
@@ -33,6 +33,8 @@ function App() {
       <Route path='/GOne' element={<GoneDash/>} />
       <Route path='/GOneAddRes' element ={<GoneAddResult/>} />
       <Route path="/GoneStd" element ={<GoneStudent/>} />
+
+      <Route path="/SLogin" element ={<SLogin/>} />
       
     </Routes>
 </Router>

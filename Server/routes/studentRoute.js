@@ -15,7 +15,7 @@ authRouter.post("/addStudents", async (req , res)=>{
         });
         await studet.save();
         res.status(200).json({
-            massage: "Student added successfully"
+            message: "Student added successfully" 
         })
     }
     
@@ -40,6 +40,34 @@ authRouter.get("/getStd/:Gid", async (req,res)=>{
     console.error("Error fetching students:", error);
     res.status(500).json({ message: "Failed to fetch students." });
   }
-})
+});
+
+authRouter.patch("/addMarks", async (req,res)=>{
+    const {GradeID,stdID,sinhalaMarks,mathematicsMarks,parisarayaMarks,englishMarks,religionMarks} =req.body;
+   
+    try{
+        const student = await Student.findOne({ stdID: stdID, GradeID: GradeID });
+        if (!student) {
+            return res.status(404).json({ message: "Student not found" });
+          }
+        student.sinhalaMarks = sinhalaMarks;
+        student.mathematicsMarks = mathematicsMarks;
+        student.parisarayaMarks = parisarayaMarks;
+        student.englishMarks = englishMarks;
+        student.religionMarks = religionMarks;
+        await student.save();
+        res.status(200).json({
+            message: "Marks added successfully"
+        })
+    }
+    catch(err){
+        console.log(err);
+        res.status(500).json({massage:"error"
+
+        });
+
+    }
+}
+)
 
 module.exports =authRouter;
